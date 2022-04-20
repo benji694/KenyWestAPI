@@ -24,8 +24,18 @@ li{
     padding: 2em;
     border: solid 1px black;
     margin: 0.5em;
+    position: relative;
+
+
+}
+.buttonGroup{
+    position: absolute;
+    right: -1.5em;
+    top: 30%;
+    height: 3em;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 footer{
     position: absolute; 

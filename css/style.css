@@ -4,12 +4,28 @@ html{
 body{
     margin: 0;
 }
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
 header{
     text-align: center;
     text-transform: uppercase;
     background-color: #B3D4FC;
     padding: 1em;
     font-size: 2em;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    font-size: 2em;
+}
+li{
+    padding: 2em;
+    border: solid 1px black;
+    margin: 0.5em;
+    display: flex;
+    align-items: center;
 }
 footer{
     position: absolute; 

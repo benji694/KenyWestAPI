@@ -59,7 +59,6 @@ const moveUp = (index) => {
   }
   let quote = quotes.splice(index, 1);
   quotes.splice(index - 1, 0, quote[0]);
-  console.log(quotes);
   render();
 };
 
@@ -69,6 +68,5 @@ const moveDown = (index) => {
   }
   let quote = quotes.splice(index, 1);
   quotes.splice(index + 1, 0, quote[0]);
-  console.log(quotes);
   render();
 };

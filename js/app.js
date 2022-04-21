@@ -70,3 +70,5 @@ const moveDown = (index) => {
   quotes.splice(index + 1, 0, quote[0]);
   render();
 };
+
+btnAdd.click();

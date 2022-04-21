@@ -20,10 +20,10 @@ btnAdd.addEventListener("click", () => {
         p.textContent =
           "Désoler, cette citation est déjà afficher ci-dessous...";
         header.appendChild(p);
+        render();
       }
     })
     .catch((error) => console.log(error));
-  render();
 });
 
 const render = () => {

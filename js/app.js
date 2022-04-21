@@ -1,7 +1,8 @@
 const btnAdd = document.querySelector("#btnAdd");
 const list = document.querySelector("#list");
 const header = document.querySelector("header");
-let quotes = [];
+
+const quotes = [];
 
 btnAdd.addEventListener("click", () => {
   if (header.children.length > 3) {
@@ -20,24 +21,54 @@ btnAdd.addEventListener("click", () => {
         p.textContent =
           "Désoler, cette citation est déjà afficher ci-dessous...";
         header.appendChild(p);
-        render();
       }
     })
     .catch((error) => console.log(error));
+  render();
 });
 
 const render = () => {
   list.innerHTML = "";
   for (let i = 0; i < quotes.length; i++) {
     let element = document.createElement("li");
-    element.innerHTML = `
-        <p>${quotes[i]}</p>
-        <div class='buttonGroup'>
-            <button class='btnUp'>UP</button>
-            <button class='btnDown'>DOWN</button>
-        </div>
-    `;
-
+    let p = document.createElement("p");
+    p.textContent = quotes[i];
+    let buttonGroup = document.createElement("div");
+    buttonGroup.className = "buttonGroup";
+    let btnUp = document.createElement("button");
+    btnUp.textContent = "UP";
+    btnUp.onclick = () => {
+      moveUp(i);
+    };
+    let btnDown = document.createElement("button");
+    btnDown.textContent = "DOWN";
+    btnDown.onclick = () => {
+      moveDown(i);
+    };
+    buttonGroup.appendChild(btnUp);
+    buttonGroup.appendChild(btnDown);
+    element.appendChild(p);
+    element.appendChild(buttonGroup);
     list.appendChild(element);
   }
+};
+
+const moveUp = (index) => {
+  if (index == 0) {
+    return false;
+  }
+  let quote = quotes.splice(index, 1);
+  quotes.splice(index - 1, 0, quote[0]);
+  console.log(quotes);
+  render();
+};
+
+const moveDown = (index) => {
+  if (index === quotes.length - 1) {
+    return false;
+  }
+  let quote = quotes.splice(index, 1);
+  quotes.splice(index + 1, 0, quote[0]);
+  console.log(quotes);
+  render();
 };

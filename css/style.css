@@ -3,9 +3,10 @@ html{
 }
 body{
     margin: 0;
+    background-color: black;
 }
 .container{
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 header{
@@ -29,6 +30,7 @@ header img{
 header button{
     padding: 1em 2em;
     border-radius: 10px;
+    text-transform: uppercase;
 }
 #app{
     min-height: 400px;
@@ -51,7 +53,7 @@ li{
 .buttonGroup{
     position: absolute;
     right: -1.5em;
-    top: 30%;
+    bottom: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

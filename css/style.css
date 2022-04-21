@@ -32,8 +32,7 @@ header button{
 }
 #app{
     min-height: 400px;
-
-    padding: 27em 5em 7em;
+    padding: 27em 9em 7em 2em;
     z-index: 1;
     background-color: #B3D4FC;
 
@@ -46,7 +45,7 @@ ul{
 li{
     padding: 1em 3em;
     border: solid 1px black;
-    margin: 0.5em;
+    margin: 1em;
     position: relative;
 }
 .buttonGroup{

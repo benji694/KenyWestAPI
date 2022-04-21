@@ -5,7 +5,7 @@ const header = document.querySelector("header");
 const quotes = [];
 
 btnAdd.addEventListener("click", () => {
-  if (header.children.length > 3) {
+  if (header.children.length > 4) {
     const p = header.querySelector("p");
     header.removeChild(p);
   }

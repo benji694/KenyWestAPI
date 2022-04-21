@@ -19,15 +19,24 @@ header{
     background-color: #B3D4FC;
     padding: 1em;
     font-size: 2em;
+    box-shadow: 0px 5px 19px 5px rgba(0,0,0,0.8);
+}
+header img{
+    width: 10em;
+    position: absolute;
+    left: 2em;
 }
 header button{
     padding: 1em 2em;
     border-radius: 10px;
 }
 #app{
-    margin-top: 27em;
-    margin-bottom: 7em;
+    min-height: 400px;
+
+    padding: 27em 5em 7em;
     z-index: 1;
+    background-color: #B3D4FC;
+
 }
 ul{
     list-style: none;
@@ -44,7 +53,6 @@ li{
     position: absolute;
     right: -1.5em;
     top: 30%;
-    height: 3em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -56,6 +64,7 @@ footer{
     right: 0;
     padding: 2em;
     background-color: #B3D4FC;
+    box-shadow: 0px 5px 19px 5px rgba(0,0,0,0.8);
 }
 footer small{
     font-size: 1em;

@@ -1,13 +1,16 @@
 $("#btnAdd").click(() => {
   $.get("https://api.kanye.rest/", (data) => {
-    let element = $.create("li");
-    let p = $.create("p").text(data.quote);
-    let buttonGroup = $.create("div");
-    let btnUp = $.create("button");
-    let btnDown = $.create("button");
-    element.append(p, buttonGroup);
+    let p = $("<p></p>").text(data.quote);
+    let btnUp = $("<button></button>").text("UP");
+    btnUp.click(() => {
+      btnUp.parent().parent().prev().before(btnUp.parent().parent());
+    });
+    let btnDown = $("<button></button>").text("DOWN");
+    btnDown.click(() => {
+      btnDown.parent().parent().next().after(btnDown.parent().parent());
+    });
+    let buttonGroup = $("<div></div>").append(btnUp, btnDown);
+    let element = $("<li></li>").append(p, buttonGroup);
     $("#list").append(element);
   });
 });
-
-$(".btnUp").click(() => console.log("hello"));

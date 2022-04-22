@@ -35,7 +35,7 @@ header button{
 }
 #app{
     min-height: 750px;
-    padding: 20em 9em 7em 2em;
+    padding: 27em 9em 7em 2em;
     z-index: 1;
     background-color: #B3D4FC;
 
@@ -59,6 +59,7 @@ li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 2.5em;
 }
 footer{
     position: fixed;
